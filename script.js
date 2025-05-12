@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth Scroll
     const navLinks = document.querySelectorAll('a[href^="#"]');
     navLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -15,16 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
             document.addEventListener('DOMContentLoaded', function() {
-                // Códigos existentes...
-            
-                // Adicione este novo trecho no final da função
-                // Efeito de hover no botão de Encomenda
                 const encomendaBtn = document.querySelector('.btn-encomenda');
                 
                 if (encomendaBtn) {
                     encomendaBtn.addEventListener('click', function() {
-                        // Aqui você pode adicionar a ação de clique, por exemplo:
-                        // Redirecionar para a seção de contato
                         const contatoSection = document.getElementById('contato');
                         if (contatoSection) {
                             contatoSection.scrollIntoView({ behavior: 'smooth' });
@@ -35,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Infinite Carousel Initialization
     $('.bag-carousel').owlCarousel({
         loop: true,
         margin: 10,
@@ -55,46 +47,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Form Validation and Submission
     const contactForm = document.getElementById('contactForm');
     
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Coleta dos dados do formulário
         const nome = document.getElementById('nome').value.trim();
         const email = document.getElementById('email').value.trim();
         const mensagem = document.getElementById('mensagem').value.trim();
         
-        // Validação básica
         if (!nome || !email || !mensagem) {
             alert('Por favor, preencha todos os campos.');
             return;
         }
         
-        // Validação de e-mail
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             alert('Por favor, insira um e-mail válido.');
             return;
         }
         
-        // Objeto com os dados do formulário
         const formData = {
             nome: nome,
             email: email,
             mensagem: mensagem
         };
         
-        // Simulação de envio de formulário (substitua com sua lógica real de backend)
         try {
-            // Aqui você normalmente faria uma chamada fetch para seu backend
             console.log('Dados do formulário:', formData);
             
-            // Limpar o formulário após o envio
             contactForm.reset();
             
-            // Mostrar mensagem de sucesso
             alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
         } catch (error) {
             console.error('Erro ao enviar formulário:', error);
@@ -102,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Efeito de Typing na Seção Hero
+
     const heroTitle = document.querySelector('.hero h1');
     const heroSubtitle = document.querySelector('.hero .lead');
     
@@ -119,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
         type();
     }
     
-    // Iniciar typing effect quando a página carregar
     if (heroTitle && heroSubtitle) {
         typeWriter(heroTitle, heroTitle.textContent);
         setTimeout(() => {
@@ -127,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, heroTitle.textContent.length * 50);
     }
 
-    // Animação de Entrada das Seções
     const sections = document.querySelectorAll('.section');
     
     const observerOptions = {
@@ -150,7 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // Adicionar estilo para animações de seções
     const style = document.createElement('style');
     style.textContent = `
         .section-hidden {
