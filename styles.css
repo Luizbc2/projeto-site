@@ -1,4 +1,4 @@
-/* Variáveis de Cores */
+
 :root {
     --primary-color: #000000;
     --secondary-color: #ffffff;
@@ -6,7 +6,7 @@
     --hover-color: #404040;
 }
 
-/* Reset e Configurações Básicas */
+
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Navbar Styling */
+
 .navbar {
     background-color: rgba(255,255,255,0.95);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -63,7 +63,6 @@ body {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* Hero Section */
 .hero {
     height: 100vh;
     background-image: url('/api/placeholder/1920/1080');
@@ -101,7 +100,6 @@ body {
     font-size: 1.5rem;
 }
 
-/* Sections */
 .section {
     padding: 80px 0;
     background-color: var(--secondary-color);
@@ -125,7 +123,6 @@ body {
     background-color: var(--primary-color);
 }
 
-/* Bolsas Carousel */
 .bag-carousel .owl-item img {
     max-height: 400px;
     width: auto;
@@ -141,7 +138,6 @@ body {
     display: none;
 }
 
-/* Sobre Section */
 #sobre img {
     max-width: 250px;
     border: 3px solid var(--primary-color);
@@ -152,7 +148,6 @@ body {
     transform: rotate(5deg);
 }
 
-/* Contato Form */
 #contato .form-control {
     border-color: var(--primary-color);
     transition: all 0.3s ease;
@@ -173,7 +168,6 @@ body {
     background-color: var(--hover-color);
 }
 
-/* WhatsApp Float Button */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -199,7 +193,6 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -213,7 +206,6 @@ body {
         padding: 50px 0;
     }
 }
-/* Adicione este trecho no final do arquivo */
 .btn-encomenda {
     background-color: var(--primary-color);
     color: var(--secondary-color);
