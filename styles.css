@@ -161,9 +161,9 @@ img {
 }
 
 .btn-primary-custom {
-    background-color: var(--color-primary);
-    color: var(--color-background);
-    border: 2px solid var(--color-primary);
+    background-color: #D5C7AA;
+    color: #000000;
+    border: 0px solid var(--color-primary);
     padding: 12px 30px;
     font-family: var(--font-headings);
     font-weight: 400;
@@ -199,7 +199,7 @@ img {
 
 .btn-secondary-custom:hover {
     background-color: var(--color-secondary);
-    color: var(--color-background);
+    color: #D5C7AA;
     transform: translateY(-2px);
 }
 
