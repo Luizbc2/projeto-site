@@ -2,14 +2,14 @@
 
 :root {
     --font-primary: 'Poppins', sans-serif;
-    --font-headings: 'Playfair Display', serif;
-    --color-text: #333;
-    --color-primary: #DAA520;
-    --color-primary-darker: #C0901C;
-    --color-secondary: #502C1D;
-    --color-background: #FFFFFF;
-    --color-background-contrast: #f9f6f2;
-    --color-border: #e0e0e0;
+    --font-headings: 'JetBrains Mono', serif;
+    --color-text: #000000;
+    --color-primary:#000000;
+    --color-primary-darker: #6e634c;
+    --color-secondary: #000000;
+    --color-background: #D5C7AA;
+    --color-background-contrast: #8E9B6D;
+    --color-border: #8E9B6D;
     --border-radius-sm: 0.3rem;
     --border-radius-md: 0.5rem;
     --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -64,14 +64,14 @@ img {
 }
 
 .site-navbar {
-    background-color: rgba(255, 255, 255, 0.97);
+    background-color: #D5C7AA;
     box-shadow: var(--shadow-soft);
     padding: 0.8rem 0;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .site-navbar .navbar-brand {
-    font-family: var(--font-headings);
+    font-family: 'Poppins', sans-serif;
     color: var(--color-primary) !important;
     font-size: 1.8rem;
     font-weight: 700;
@@ -295,7 +295,7 @@ img {
 
 #sobre .lead {
     font-size: 1.15rem;
-    color: #555;
+    color: #000000;
     margin-bottom: 1.5rem;
     font-weight: 400;
 }
@@ -305,18 +305,24 @@ img {
 }
 
 .contact-form {
-    background-color: var(--color-background-contrast);
+    background-color:#8E9B6D
+}
+.form-label
+{
+    color: white
 }
 .contact-form .form-label {
     font-weight: 500;
-    color: var(--color-secondary);
+    color: black;
     margin-bottom: 0.3rem;
 }
+
 .contact-form .form-control {
     border-radius: var(--border-radius-sm);
     padding: 12px 15px;
     border: 1px solid var(--color-border);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--color-background);
 }
 
 .contact-form .form-control:focus {
@@ -372,6 +378,7 @@ img {
     }
     .section-title {
         font-size: 2.2rem;
+    };
     }
     .site-navbar .nav-link {
         padding: 0.6rem 0.8rem !important;
@@ -383,7 +390,7 @@ img {
         border-radius: var(--border-radius-md);
         box-shadow: var(--shadow-medium);
     }
-}
+
 
 @media (max-width: 767.98px) {
     body { font-size: 15px; }
@@ -402,4 +409,7 @@ img {
      .contact-form {
         padding: 30px 20px !important;
     }
+}
+.font-navbar {
+   font-family: 'Poppins', sans-serif;
 }
