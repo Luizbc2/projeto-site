@@ -32,6 +32,18 @@ h1, h2, h3, h4, h5 {
     color: var(--color-secondary);
     font-weight: 700;
 }
+@media (max-width: 991.98px) {
+
+    .site-navbar .navbar-collapse {
+        background-color: var(--color-background);
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-radius: var(--border-radius-md);
+        box-shadow: var(--shadow-medium);
+
+        margin-top: 1.0rem;
+    }
+}
 
 .logo {
     width: 60px;
@@ -412,4 +424,206 @@ img {
 }
 .font-navbar {
    font-family: 'Poppins', sans-serif;
+}
+.form-section-title {
+    font-family: var(--font-headings);
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    background-color: #8E9B6D;
+    padding: 1.5rem;
+}
+
+.contact-form .form-label {
+    font-weight: 500;
+    color: black;
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.contact-form .form-control {
+    border-radius: var(--border-radius-sm);
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--color-background);
+    font-size: 0.95rem;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(218, 165, 32, 0.25);
+}
+
+.contact-form .mb-3 {
+    margin-bottom: 0.8rem !important;
+}
+
+.contact-form .btn-md {
+    padding: 10px 25px;
+    font-size: 0.85rem;
+}
+
+.whatsapp-contact-section {
+    padding: 30px 20px;
+    background-color: #8E9B6D;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.whatsapp-contact-section .lead {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.whatsapp-button {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    background-color: #25D366;
+    border-color: #25D366;
+    color: #ffffff;
+}
+
+.whatsapp-button:hover {
+    background-color: #1DAE56; 
+    border-color: #1DAE56;
+    color: #ffffff;
+}
+
+.whatsapp-button .fab {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 767.98px) {
+    .whatsapp-contact-section {
+        margin-top: 30px;
+        height: auto;
+    }
+    .contact-form {
+        padding: 25px 15px !important;
+    }
+     .form-section-title {
+        font-size: 1.3rem;
+    }
+}
+    
+.direct-contact-section {
+    padding: 30px 20px;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.direct-contact-section .lead {
+    font-size: 1.10rem; 
+    font-weight: 500;
+    color: #333;
+}
+
+.direct-contact-button {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 12px 25px; 
+    font-size: 0.95rem;
+    color: #ffffff;
+    text-decoration: none; 
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.direct-contact-button:hover {
+    transform: translateY(-2px); 
+    color: #ffffff; 
+}
+
+.direct-contact-button .fab {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+}
+
+.whatsapp-button:hover {
+    background-color: #1DAE56;
+}
+
+.instagram-button {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); /* Gradiente do Instagram */
+}
+
+.instagram-button:hover {
+    opacity: 0.9; 
+}
+
+.form-section-title {
+    font-family: var(--font-headings);
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+@media (max-width: 767.98px) {
+    .direct-contact-section {
+        margin-top: 30px;
+        height: auto; 
+    }
+     .form-section-title {
+        font-size: 1.3rem;
+    }
+}
+
+.contact-form {
+    background-color: var(--color-background-contrast);
+    padding: 1.5rem;
+}
+
+.contact-form .form-label {
+    font-weight: 500;
+    color: black;
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.contact-form .form-control {
+    border-radius: var(--border-radius-sm);
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--color-background);
+    font-size: 0.95rem;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(218, 165, 32, 0.25);
+}
+
+.contact-form .mb-3 {
+    margin-bottom: 0.8rem !important;
+}
+
+.contact-form .btn-md {
+    padding: 10px 25px;
+    font-size: 0.85rem;
 }
