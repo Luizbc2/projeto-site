@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .logo {
-    width: 60px;
+    width: 50px;
     height: auto;
     border-radius: 100%;
 }
@@ -354,15 +354,52 @@ img {
 .site-footer .fa-heart {
     color: var(--color-primary);
 }
+.section-divider {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    display: block;
+    margin-top: -70px;
+    z-index: 1;
+}
 
-.whatsapp-float {
+.section-divider.top {
+    transform: rotate(180deg);
+    margin-top: 0;
+    margin-bottom: -70px;
+}
+
+.section-divider svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.section-divider.white svg path {
+    fill: var(--color-background);
+}
+
+.section-divider.contrast svg path {
+    fill: var(--color-background-contrast);
+}
+
+.section-divider.dark svg path {
+    fill: var(--color-secondary);
+}
+
+.site-section {
+    position: relative;
+    z-index: 0;
+}
+
+.whatsapp-float, .instagram-float {
     position: fixed;
     width: 55px;
     height: 55px;
-    bottom: 30px;
     right: 30px;
-    background-color: #00ff5e; 
-    color: #FFF;
     border-radius: 50%;
     text-align: center;
     font-size: 28px;
@@ -372,13 +409,53 @@ img {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.whatsapp-float:hover {
-    background-color: #1DAE56;
-    transform: scale(1.15) rotate(20deg);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);  
+
+.instagram-float {
+    bottom: 110px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #FFF;
+}
+
+.whatsapp-float {
+    bottom: 30px;
+    background-color: #25D366;
+    color: #FFF;
+}
+
+.instagram-float:hover, .whatsapp-float:hover {
+    transform: scale(1.15) rotate(15deg);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    color: #FFF;
+}
+
+.instagram-float:after, .whatsapp-float:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    animation: pulse 2s infinite;
+    box-sizing: border-box;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -493,12 +570,35 @@ img {
     background-color: #25D366;
     border-color: #25D366;
     color: #ffffff;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .whatsapp-button:hover {
     background-color: #1DAE56; 
     border-color: #1DAE56;
     color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-button::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 120%;
+    height: 120%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(30deg) translateY(100%);
+    transition: transform 0.6s ease;
+}
+
+.whatsapp-button:hover::before {
+    transform: rotate(30deg) translateY(-100%);
 }
 
 .whatsapp-button .fab {
@@ -626,4 +726,87 @@ img {
 .contact-form .btn-md {
     padding: 10px 25px;
     font-size: 0.85rem;
+}
+
+.instagram-button {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.instagram-button::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 120%;
+    height: 120%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(30deg) translateY(100%);
+    transition: transform 0.6s ease;
+}
+
+.instagram-button:hover::before {
+    transform: rotate(30deg) translateY(-100%);
+}
+
+.instagram-float {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 100px;
+    right: 30px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.instagram-float:hover {
+    transform: scale(1.15) rotate(-15deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.instagram-float:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    animation: pulse 2s infinite;
+    box-sizing: border-box;
 }
