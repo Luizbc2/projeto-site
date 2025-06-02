@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Smooth scroll for internal links
     const internalLinks = document.querySelectorAll('a[href^="#"]');
     internalLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -17,12 +18,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Navbar scroll effect
+    const navbar = document.querySelector('.site-navbar');
+    if (navbar) {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Run on load to set initial state
+    }
+
+    // Owl Carousel Initialization
     if (document.querySelector('.bag-carousel')) {
         $('.bag-carousel').owlCarousel({
             loop: true,
             margin: 20,
-            nav: false,
+            nav: true, // Show navigation arrows
             dots: true,
+            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'], // Custom arrow icons
             autoplay: true,
             autoplayTimeout: 4000,
             autoplayHoverPause: true,
@@ -45,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Contact Form Simulation
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -73,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Hero Section Typewriter Effect
     const heroTitleElement = document.querySelector('.hero-title');
     const heroSubtitleElement = document.querySelector('.hero-subtitle');
     
@@ -103,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, originalTitle.length * 70 + 300);
     }
 
+    // Section Fade-in Animation on Scroll
     const sectionsToAnimate = document.querySelectorAll('.site-section');
     
     if (sectionsToAnimate.length > 0 && "IntersectionObserver" in window) {
@@ -141,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.head.appendChild(animationStyle);
     }
 
+    // Set Current Year in Footer
     const currentYearSpan = document.getElementById('currentYear');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
