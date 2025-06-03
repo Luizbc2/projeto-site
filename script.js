@@ -41,33 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const nome = document.getElementById('nome').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const mensagem = document.getElementById('mensagem').value.trim();
-            
-            if (!nome || !email || !mensagem) {
-                alert('Por favor, preencha todos os campos obrigatórios.');
-                return;
-            }
-            
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Por favor, insira um e-mail válido.');
-                return;
-            }
-            
-            const formData = { nome, email, mensagem };
-            console.log('Dados do formulário:', formData);
-            
-            alert('Mensagem enviada com sucesso! (Simulação)\nEntraremos em contato em breve.');
-            contactForm.reset();
-        });
-    }
+
 
     const heroTitleElement = document.querySelector('.hero-title');
     const heroSubtitleElement = document.querySelector('.hero-subtitle');

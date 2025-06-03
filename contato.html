@@ -47,22 +47,22 @@
                         <div class="unified-contact-block">
                             <div class="row align-items-stretch">
                                 <div class="col-lg-7">
-                                    <form id="contactForm">
+                                    <form id="contactForm" action="https://formsubmit.co/neusavmll@gmail.com" method="POST">
                                         <h3 class="form-section-title mb-4">Envie uma Mensagem</h3>
                                         <div class="row">
                                             <div class="col-md-6 mb-3">
                                                 <label for="nome" class="form-label">Nome Completo</label>
-                                                <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" required>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <label for="email" class="form-label">Seu Melhor E-mail</label>
-                                                <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com" required>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com" required>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6 mb-3">
                                                 <label for="produtoInteresse" class="form-label">Produto de Interesse</label>
-                                                <select id="produtoInteresse" class="form-select">
+                                                <select id="produtoInteresse" name="produto_interesse" class="form-select">
                                                     <option selected>Selecione um produto...</option>
                                                     <option>Frasqueira</option>
                                                     <option>Mochila com estojo</option>
@@ -89,7 +89,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="mensagem" class="form-label">Sua Mensagem</label>
-                                            <textarea class="form-control" id="mensagem" rows="4" placeholder="Deixe os detalhes do seu pedido ou sua dúvida aqui..." required></textarea>
+                                            <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Deixe os detalhes do seu pedido ou sua dúvida aqui..." required></textarea>
                                         </div>
                                         <div class="mb-3">
                                              <label class="form-label">Sua avaliação do Ateliê:</label>
@@ -105,7 +105,7 @@
                                             <button type="submit" class="btn btn-primary-custom btn-md">Enviar Mensagem</button>
                                         </div>
                                     </form>
-                                </div>
+                                    </div>
         
                                 <div class="col-lg-5 direct-contact-pane">
                                     <div class="text-center">
