@@ -539,11 +539,6 @@ img {
 }
 
 @media (max-width: 991.98px) {
-    .site-navbar .container {
-        background-color: transparent;
-        padding: 0;
-    }
-
     .site-navbar .navbar-collapse {
         background-color: rgba(30, 30, 30, 0.95);
         border: none;

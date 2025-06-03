@@ -1,24 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // Smooth scroll for internal links
-    const internalLinks = document.querySelectorAll('a[href^="#"]');
-    internalLinks.forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
 
-    // Navbar scroll effect
     const navbar = document.querySelector('.site-navbar');
     if (navbar) {
         const handleScroll = () => {
@@ -29,17 +10,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Run on load to set initial state
+        handleScroll();
     }
-
-    // Owl Carousel Initialization
     if (document.querySelector('.bag-carousel')) {
         $('.bag-carousel').owlCarousel({
             loop: true,
             margin: 20,
-            nav: true, // Show navigation arrows
+            nav: true,
             dots: true,
-            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'], // Custom arrow icons
+            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
             autoplay: true,
             autoplayTimeout: 4000,
             autoplayHoverPause: true,
@@ -62,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact Form Simulation
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -91,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Hero Section Typewriter Effect
     const heroTitleElement = document.querySelector('.hero-title');
     const heroSubtitleElement = document.querySelector('.hero-subtitle');
     
@@ -118,11 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         typeWriter(heroTitleElement, originalTitle);
         setTimeout(() => {
-            typeWriter(heroSubtitlele, originalSubtitle);
+            typeWriter(heroSubtitleElement, originalSubtitle);
         }, originalTitle.length * 70 + 300);
     }
 
-    // Section Fade-in Animation on Scroll
     const sectionsToAnimate = document.querySelectorAll('.site-section');
     
     if (sectionsToAnimate.length > 0 && "IntersectionObserver" in window) {
