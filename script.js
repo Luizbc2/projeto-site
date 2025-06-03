@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         typeWriter(heroTitleElement, originalTitle);
         setTimeout(() => {
-            typeWriter(heroSubtitleElement, originalSubtitle);
+            typeWriter(heroSubtitlele, originalSubtitle);
         }, originalTitle.length * 70 + 300);
     }
 
@@ -161,10 +161,25 @@ document.addEventListener('DOMContentLoaded', function() {
         document.head.appendChild(animationStyle);
     }
 
-    // Set Current Year in Footer
     const currentYearSpan = document.getElementById('currentYear');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
+    }
+
+    const dropdownElement = document.getElementById('dropdownComoConheceu');
+    if (dropdownElement) {
+        const dropdownButton = dropdownElement;
+        const dropdownItems = document.querySelectorAll('[aria-labelledby="dropdownComoConheceu"] .dropdown-item');
+        const hiddenInput = document.getElementById('comoConheceuInput');
+
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const selectedValue = this.textContent;
+                dropdownButton.textContent = selectedValue;
+                hiddenInput.value = selectedValue;
+            });
+        });
     }
 
 });
