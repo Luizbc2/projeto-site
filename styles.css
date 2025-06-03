@@ -60,7 +60,6 @@ a:hover {
 img {
     max-width: 100%;
     height: auto;
-    border-radius: var(--border-radius-md);
 }
 
 .site-navbar {
@@ -282,6 +281,7 @@ img {
     aspect-ratio: 3/4; 
     margin-bottom: 1.5rem; 
     display: block; 
+    border-radius: var(--border-radius-md);
 }
 
 .bag-img-container img {
@@ -755,7 +755,7 @@ img {
     background-color: var(--color-background);
     border: 1px solid var(--color-primary-darker);
     color: var(--color-secondary);
-    border-radius: var(--border-radius-sm);
+    border-radius: var(--border-radius-md);
 }
 
 .unified-contact-block .form-control:focus,
