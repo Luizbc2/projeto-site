@@ -11,7 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/projeto-site/styles.css">
 </head>
 <body>
 
@@ -45,8 +45,7 @@
                         <div class="unified-contact-block">
                             <div class="row align-items-stretch">
                                 <div class="col-lg-7">
-                                   <form id="contactForm" name="contact" method="POST" data-netlify="true">
-                                        <input type="hidden" name="form-name" value="contact" />
+                                   <form id="contactForm" action="https://formsubmit.co/luizotaviomello82@gmail.com" method="POST">
                                         <h3 class="form-section-title mb-4">Envie uma Mensagem</h3>
                                         <div class="row">
                                             <div class="col-md-6 mb-3">
