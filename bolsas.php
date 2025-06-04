@@ -12,7 +12,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/projeto-site/styles.css">
 </head>
 <body>
 
@@ -20,17 +20,17 @@
         <div class="container">
             <div class="logo-div">
                 <img src="imagens/logo.jpg" alt="Logo do Ateliê" class="logo"> 
-                <a class="navbar-brand font-navbar" href="index.html">Nis Mello Ateliê</a>
+                <a class="navbar-brand font-navbar" href="index.php">Nis Mello Ateliê</a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="bolsas.html">Bolsas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Mim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="bolsas.php">Bolsas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.php">Sobre Mim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.php">Contato</a></li>
                 </ul>
             </div>
         </div>
@@ -48,7 +48,7 @@
                             <div class="bag-hover-overlay">
                                 <h4 class="overlay-title">Frasqueira Gold</h4>
                                 <p class="overlay-text">Transforme seu look com esta peça exclusiva, um toque de luxo e brilho para qualquer ocasião.</p>
-                                <a href="contato.html" class="btn btn-primary-custom btn-sm">Encomendar</a>
+                                <a href="contato.php" class="btn btn-primary-custom btn-sm">Encomendar</a>
                             </div>
                         </div>
                         <h3 class="bag-name">Frasqueiras.</h3>
@@ -60,7 +60,7 @@
                             <div class="bag-hover-overlay">
                                 <h4 class="overlay-title">Mochila com estojo infatil.</h4>
                                 <p class="overlay-text">O kit perfeito para a escola ou aventuras, feito para acompanhar a energia das crianças com muito estilo.</p>
-                                <a href="contato.html" class="btn btn-primary-custom btn-sm">Encomendar</a>
+                                <a href="contato.php" class="btn btn-primary-custom btn-sm">Encomendar</a>
                             </div>
                         </div>
                         <h3 class="bag-name">Mochila com estojo.</h3>
@@ -72,7 +72,7 @@
                             <div class="bag-hover-overlay">
                                 <h4 class="overlay-title">Kit para estudantes</h4>
                                 <p class="overlay-text">Mantenha seus materiais em ordem e com acesso fácil, ideal para a rotina universitária ou cursos criativos.</p>
-                                <a href="contato.html" class="btn btn-primary-custom btn-sm">Encomendar</a>
+                                <a href="contato.php" class="btn btn-primary-custom btn-sm">Encomendar</a>
                             </div>
                         </div>
                         <h3 class="bag-name">Kit para estudantes</h3>
@@ -84,7 +84,7 @@
                             <div class="bag-hover-overlay">
                                 <h4 class="overlay-title">Bolsinha praiana</h4>
                                 <p class="overlay-text">Leve a leveza e o charme da praia com você, combinando conforto e estilo em seus momentos de lazer.</p>
-                                <a href="contato.html" class="btn btn-primary-custom btn-sm">Encomendar</a>
+                                <a href="contato.php" class="btn btn-primary-custom btn-sm">Encomendar</a>
                             </div>
                         </div>
                         <h3 class="bag-name">Bolsinha para praia</h3>
@@ -96,7 +96,7 @@
                             <div class="bag-hover-overlay">
                                 <h4 class="overlay-title">Necessaire Temática</h4>
                                 <p class="overlay-text">Celebre momentos únicos com esta necessaire encantadora, ideal para presentear e guardar suas memórias.</p>
-                                <a href="contato.html" class="btn btn-primary-custom btn-sm">Encomendar</a>
+                                <a href="contato.php" class="btn btn-primary-custom btn-sm">Encomendar</a>
                             </div>
                         </div>
                         <h3 class="bag-name">Necessaire Temática</h3>
@@ -104,7 +104,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-5">
-                    <a href="contato.html" class="btn btn-primary-custom">Encomende a Sua!</a>
+                    <a href="contato.php" class="btn btn-primary-custom">Encomende a Sua!</a>
                 </div>
             </div>
         </section>

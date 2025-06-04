@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Nis Mello Ateliê</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -19,18 +18,18 @@
     <nav class="navbar navbar-expand-lg fixed-top site-navbar">
         <div class="container">
             <div class="logo-div">
-                <img src="imagens/logo.jpg" alt="Logo do Ateliê" class="logo"> 
-                <a class="navbar-brand font-navbar" href="index.html">Nis Mello Ateliê</a>
+                <img src="imagens/logo.jpg" alt="Logo do Ateliê" class="logo">
+                <a class="navbar-brand font-navbar" href="index.php">Nis Mello Ateliê</a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="bolsas.html">Bolsas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Mim</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bolsas.php">Bolsas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.php">Sobre Mim</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contato.php">Contato</a></li>
                 </ul>
             </div>
         </div>
@@ -41,13 +40,13 @@
             <div class="container">
                 <h2 class="section-title text-center">Fale Conosco</h2>
                 <p class="section-subtitle text-center">Adoraria ouvir de você! Envie sua mensagem, tire dúvidas ou faça sua encomenda.</p>
-        
                 <div class="row justify-content-center mt-5">
                     <div class="col-lg-11">
                         <div class="unified-contact-block">
                             <div class="row align-items-stretch">
                                 <div class="col-lg-7">
-                                    <form id="contactForm" action="https://formsubmit.co/luizotaviomello82@gmail.com" method="POST">
+                                   <form id="contactForm" name="contact" method="POST" data-netlify="true">
+                                        <input type="hidden" name="form-name" value="contact" />
                                         <h3 class="form-section-title mb-4">Envie uma Mensagem</h3>
                                         <div class="row">
                                             <div class="col-md-6 mb-3">
@@ -105,8 +104,7 @@
                                             <button type="submit" class="btn btn-primary-custom btn-md">Enviar Mensagem</button>
                                         </div>
                                     </form>
-                                    </div>
-        
+                                </div>
                                 <div class="col-lg-5 direct-contact-pane">
                                     <div class="text-center">
                                         <h3 class="form-section-title mb-4">Contato Direto</h3>
