@@ -176,4 +176,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     initProductModal();
+
+    const whatsappFormButton = document.getElementById('whatsappFormButton');
+    if (whatsappFormButton) {
+        whatsappFormButton.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const nomeInput = document.getElementById('nome');
+            const produtoInteresseSelect = document.getElementById('produtoInteresse');
+            const mensagemTextarea = document.getElementById('mensagem');
+
+            const nome = nomeInput ? nomeInput.value.trim() : '';
+            let produtoInteresse = '';
+            if (produtoInteresseSelect && produtoInteresseSelect.value !== 'Selecione um produto...') {
+                produtoInteresse = produtoInteresseSelect.value;
+            }
+            const mensagemUsuario = mensagemTextarea ? mensagemTextarea.value.trim() : '';
+
+            let mensagemPreenchida = `Olá Nis, tudo bem?\n\n`;
+
+            if (nome) {
+                mensagemPreenchida += `Meu nome é: ${nome}\n`;
+            }
+            if (produtoInteresse) {
+                mensagemPreenchida += `Tenho interesse em: ${produtoInteresse}\n`;
+            }
+            if (mensagemUsuario) {
+                mensagemPreenchida += `Minha mensagem: ${mensagemUsuario}\n`;
+            } else if (!nome && !produtoInteresse) {
+                mensagemPreenchida += `Tenho interesse nas suas bolsas artesanais. Poderiam me passar mais detalhes? Obrigada(o)!"\n`;
+            }
+
+            const textoCodificado = encodeURIComponent(mensagemPreenchida);
+
+            const urlWhatsApp = `https://wa.me/${WHATSAPP_NUMBER_JS}?text=${textoCodificado}`;
+
+            window.open(urlWhatsApp, '_blank');
+        });
+    }
 });
+
+function initProductModal() {
+}

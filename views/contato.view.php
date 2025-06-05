@@ -63,7 +63,7 @@
                                          </div>
                                     </div>
                                     <div class="text-center mt-4">
-                                        <button type="submit" class="btn btn-primary-custom btn-md">Enviar Mensagem</button>
+                                        <button type="submit" class="btn btn-primary-custom btn-md">Enviar Mensagem por E-mail</button>
                                     </div>
                                 </form>
                             </div>
@@ -71,8 +71,8 @@
                                 <div class="text-center">
                                     <h3 class="form-section-title mb-4">Contato Direto</h3>
                                     <p class="lead mb-3">Prefere uma resposta imediata?</p>
-                                    <p class="mb-4">Clique no botão abaixo para me chamar diretamente no WhatsApp! Estarei pronta para te atender.</p>
-                                    <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>" class="btn btn-success btn-lg whatsapp-button" target="_blank">
+                                    <p class="mb-4">Clique no botão abaixo para me chamar diretamente no WhatsApp! Você pode preencher os campos ao lado para adiantar seu atendimento.</p>
+                                    <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>" id="whatsappFormButton" class="btn btn-success btn-lg whatsapp-button" target="_blank">
                                         <i class="fab fa-whatsapp"></i> Falar no WhatsApp
                                     </a>
                                     <hr class="my-4">
