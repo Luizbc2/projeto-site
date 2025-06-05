@@ -1,14 +1,14 @@
 <main>
     <section id="contato" class="site-section" style="padding-top: 150px;">
         <div class="container">
-            <h2 class="section-title text-center">Fale Conosco</h2>
+            <h2 class="section-title text-center">Fale Comigo</h2>
             <p class="section-subtitle text-center">Adoraria ouvir de você! Envie sua mensagem, tire dúvidas ou faça sua encomenda.</p>
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-11">
                     <div class="unified-contact-block">
                         <div class="row align-items-stretch">
                             <div class="col-lg-7">
-                               <form id="contactForm" action="https://formsubmit.co/luizotaviomello82@gmail.com" method="POST">
+                               <form id="contactForm" action="https://formsubmit.co/luiz.otavio3213@gmail.com" method="POST">
                                     <h3 class="form-section-title mb-4">Envie uma Mensagem</h3>
                                     <div class="row">
                                         <div class="col-md-6 mb-3">

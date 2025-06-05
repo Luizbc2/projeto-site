@@ -18,7 +18,7 @@ return [
     [
         'imagem' => 'imagens/bolsa gpt.png', 'alt' => 'Bolsa Casual 4',
         'overlay_titulo' => 'Bolsinha praiana', 'overlay_texto' => 'Leve a leveza e o charme da praia com você, combinando conforto e estilo em seus momentos de lazer.',
-        'nome' => 'Bolsinha para praia', 'descricao' => 'O essencial para um dia de sol na.'
+        'nome' => 'Bolsinha para praia', 'descricao' => 'O essencial para um dia de sol na praia.'
     ],
     [
         'imagem' => 'imagens/pascoa necessaire.jpg', 'alt' => 'Bolsa Elegânte 5',
