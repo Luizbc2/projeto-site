@@ -132,4 +132,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    $('#contactForm').on('submit', function (e) {
+        e.preventDefault();
+
+        const form = $(this);
+        const submitBtn = form.find('button[type="submit"]');
+        const originalText = submitBtn.html();
+        const formAction = form.attr('action');
+
+        submitBtn.html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...');
+        submitBtn.prop('disabled', true);
+
+        const formData = new FormData(form[0]);
+
+        
+        $.ajax({
+            url: formAction,
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function () {
+                Swal.fire({
+                    title: "Mensagem enviada com sucesso! Em breve entraremos em contato.",
+                    icon: "success",
+                    draggable: true
+                }); 
+                form[0].reset();
+            },
+            error: function (xhr, status, error) {
+                Swal.fire({
+                    title: "Mensagem enviada com sucesso! Em breve entraremos em contato.",
+                    icon: "error",
+                    draggable: true
+                });
+                form[0].reset();
+            },
+            complete: function () {
+                submitBtn.html(originalText);
+                submitBtn.prop('disabled', false);
+            }
+        });
+    });
+
+    initProductModal();
 });
