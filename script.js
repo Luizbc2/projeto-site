@@ -218,3 +218,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initProductModal() {
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    if (navbarCollapse) {
+        const ul = navbarCollapse.querySelector('ul.navbar-nav');
+        if (ul) {
+            const wrapper = document.createElement('div');
+            wrapper.classList.add('navbar-nav-wrapper');
+
+            wrapper.appendChild(ul);
+
+            navbarCollapse.appendChild(wrapper);
+        }
+    }
+});
