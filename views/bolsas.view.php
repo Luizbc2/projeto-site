@@ -20,7 +20,7 @@
                 <?php endforeach; ?>
             </div>
             <div class="text-center mt-5">
-                <a href="index.php?page=contato" class="btn btn-primary-custom">Encomende a Sua!</a>
+                <a href="contato" class="btn btn-primary-custom">Encomende a Sua!</a>
             </div>
         </div>
     </section>

@@ -264,7 +264,7 @@ img {
     padding: 15px;
 }
 .bag-item {
-    background-color: var(--color-background);
+    background-color: #c9b78f;
     border-radius: var(--border-radius-md);
     box-shadow: var(--shadow-soft);
     padding: 20px;

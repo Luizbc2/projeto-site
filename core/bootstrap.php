@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 
 define('ROOT_PATH', dirname(__DIR__));
 
+define('BASE_URL', 'https://' . $_SERVER['HTTP_HOST'] . '/');
 
 define('SITE_NAME', 'Nis Mello Ateliê');
 define('WHATSAPP_NUMBER', '554499629630');
