@@ -63,7 +63,7 @@
                                          </div>
                                     </div>
                                     <div class="text-center mt-4">
-                                        <button type="submit" class="btn btn-primary-custom btn-md">Enviar Mensagem por E-mail</button>
+                                        <button type="submit" id="submitContactForm" class="btn btn-primary-custom btn-md">Enviar Mensagem por E-mail</button>
                                     </div>
                                 </form>
                             </div>

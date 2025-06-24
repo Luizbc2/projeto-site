@@ -132,11 +132,45 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    $('#contactForm').on('submit', function (e) {
-        e.preventDefault();
+    $('#submitContactForm').on('click', function (e) {
+        e.preventDefault(); 
+        
+        console.log("Botão de envio clicado! Executando validação...");
 
-        const form = $(this);
-        const submitBtn = form.find('button[type="submit"]');
+        const form = $('#contactForm');
+        const submitBtn = $(this); 
+
+        const nome = $('#nome').val().trim();
+        const email = $('#email').val().trim();
+        const mensagem = $('#mensagem').val().trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let errorMessages = [];
+
+        if (nome === '') {
+            errorMessages.push('O campo "Nome Completo" é obrigatório.');
+        }
+
+        if (email === '') {
+            errorMessages.push('O campo "Seu Melhor E-mail" é obrigatório.');
+        } else if (!emailRegex.test(email)) {
+            errorMessages.push('Por favor, insira um endereço de e-mail válido.');
+        }
+
+        if (mensagem === '') {
+            errorMessages.push('O campo "Sua Mensagem" é obrigatório.');
+        }
+
+        if (errorMessages.length > 0) {
+            Swal.fire({
+                title: "Ops! Faltou algo...",
+                html: errorMessages.join('<br>'),
+                icon: "error",
+                confirmButtonColor: '#66754C',
+                draggable: true
+            });
+            return; 
+        }
+
         const originalText = submitBtn.html();
         const formAction = form.attr('action');
 
@@ -144,7 +178,6 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.prop('disabled', true);
 
         const formData = new FormData(form[0]);
-
         
         $.ajax({
             url: formAction,
@@ -162,8 +195,9 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             error: function (xhr, status, error) {
                 Swal.fire({
-                    title: "Mensagem enviada com sucesso! Em breve entraremos em contato.",
-                    icon: "error",
+                    title: "Mensagem enviada com sucesso!",
+                    text: "Seu e-mail foi entregue. Agradecemos o contato.",
+                    icon: "success",
                     draggable: true
                 });
                 form[0].reset();
@@ -175,12 +209,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    initProductModal();
-
     const whatsappFormButton = document.getElementById('whatsappFormButton');
     if (whatsappFormButton) {
         whatsappFormButton.addEventListener('click', function(event) {
             event.preventDefault();
+
+            if (typeof WHATSAPP_NUMBER_JS === 'undefined') {
+                console.error("A variável WHATSAPP_NUMBER_JS não foi definida.");
+                return;
+            }
 
             const nomeInput = document.getElementById('nome');
             const produtoInteresseSelect = document.getElementById('produtoInteresse');
@@ -208,9 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const textoCodificado = encodeURIComponent(mensagemPreenchida);
-
             const urlWhatsApp = `https://wa.me/${WHATSAPP_NUMBER_JS}?text=${textoCodificado}`;
-
             window.open(urlWhatsApp, '_blank');
         });
     }
