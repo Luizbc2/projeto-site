@@ -249,6 +249,28 @@ document.addEventListener('DOMContentLoaded', function() {
             window.open(urlWhatsApp, '_blank');
         });
     }
+
+    const loaderWrapper = document.getElementById('loader-wrapper');
+    if (loaderWrapper) {
+        const hideLoader = () => loaderWrapper.classList.add('hidden');
+        const showLoader = () => loaderWrapper.classList.remove('hidden');
+
+        window.addEventListener('load', hideLoader);
+
+        document.querySelectorAll('a[href]:not([href^="#"]):not([href^="http"]):not([target="_blank"])').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (!e.ctrlKey && !e.metaKey) {
+                    showLoader();
+                }
+            });
+        });
+        
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                hideLoader();
+            }
+        });
+    }
 });
 
 function initProductModal() {

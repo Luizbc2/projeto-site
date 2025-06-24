@@ -19,6 +19,10 @@
 </head>
 <body>
 
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
     <?php require __DIR__ . '/partials/navbar.php'; ?>
 
     <?= $content; ?>
